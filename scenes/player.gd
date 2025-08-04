@@ -35,16 +35,8 @@ func _physics_process(delta: float) -> void:
 			animation.play("roll")
 		elif not is_on_floor() and dash == true:
 			animation.play("jump")
-		
 		if roll_timer <= 0.0:
 			is_rolling = false
-	#elif is_rolling and not is_on_floor() and dash == true:
-		#roll_timer -= delta
-		#var roll_direction = -1 if animation.flip_h else 1
-		#velocity.x = roll_direction * ROLL_SPEED
-		#animation.play("jump")
-		#if roll_timer <= 0.0:
-			#is_rolling = false
 	
 	# Add the gravity.
 	if not is_on_floor():
